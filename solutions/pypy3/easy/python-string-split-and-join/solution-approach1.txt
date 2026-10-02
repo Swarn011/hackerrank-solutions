@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-10-02, 11:21 p.m.
+# Technique   string-split-and-join
+# Time        O(n)
+# Space       O(n)
+# Insight     The implementation transforms the input string into a list of substrings using the space delimiter and reconstructs it by concatenating those elements with a hyphen.
+# Interview   Before: "How would you replace all spaces in a string with hyphens?" After: "I would use the split and join methods to achieve this in O(n) time and O(n) space, ensuring all space-separated words are correctly reconnected by the specified delimiter."
+# Pitfalls    (1) Using split() without the explicit space argument would incorrectly collapse multiple consecutive spaces into a single delimiter.  (2) Assuming the input string contains no spaces will result in a single-element list that remains unchanged after the join operation.
 # ──────────────────────────────────────────────────
 
 
