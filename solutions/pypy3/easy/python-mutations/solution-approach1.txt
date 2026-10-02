@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-10-02, 11:32 p.m.
+# Technique   string-slicing-concatenation
+# Time        O(n)
+# Space       O(n)
+# Insight     The function constructs a new string by concatenating the prefix before the target index, the replacement character, and the suffix following the target index.
+# Interview   Before: "How do I modify a character in a Python string?" After: "Since strings are immutable, I use slicing to create a new string with the character replaced at the specified index, resulting in O(n) time and space complexity."
+# Pitfalls    (1) Attempting to modify the string in-place using index assignment will raise a TypeError.  (2) Incorrectly calculating the slice end index as position instead of position+1 will result in the loss of the character at the target position.
 # ──────────────────────────────────────────────────
 
 def mutate_string(string, position, character):
