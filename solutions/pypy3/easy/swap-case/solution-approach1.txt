@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-10-02, 11:14 p.m.
+# Technique   string-iteration-case-toggle
+# Time        O(n)
+# Space       O(n)
+# Insight     The function iterates through each character of the input string, toggling its case using built-in methods and appending the result to a new string.
+# Interview   Before: "I could use a list comprehension with join for better performance." After: "The current O(n) approach is readable, though string concatenation in a loop creates new objects each time, which is less efficient than joining a list for very large strings."
+# Pitfalls    (1) Assuming the input string is mutable, which would cause a TypeError since strings in Python are immutable.  (2) Overlooking that non-alphabetic characters like spaces or numbers remain unchanged by the upper and lower methods.
 # ──────────────────────────────────────────────────
 
 def swap_case(s):
