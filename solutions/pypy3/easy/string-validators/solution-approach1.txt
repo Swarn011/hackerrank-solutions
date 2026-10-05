@@ -1,0 +1,37 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/string-validators/problem?isFullScreen=true
+# Problem     String Validators
+# Difficulty  Easy
+# Subdomain   Strings
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-10-06, 02:14 a.m.
+# ──────────────────────────────────────────────────
+
+if __name__ == '__main__':
+    s = input()
+
+    alnum_flag=False
+    alpha_flag=False
+    digit_flag=False
+    lower_flag=False
+    upper_flag=False
+
+    for letter in s:
+
+        if letter.isalnum():
+            alnum_flag=True
+        if letter.isalpha():
+            alpha_flag=True
+        if letter.isdigit():
+            digit_flag=True
+        if letter.islower():
+            lower_flag=True
+        if letter.isupper():
+            upper_flag=True
+    print(alnum_flag)
+    print(alpha_flag)
+    print(digit_flag)
+    print(lower_flag)
+    print(upper_flag)
